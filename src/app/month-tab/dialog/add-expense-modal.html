@@ -1,0 +1,18 @@
+<ion-content>
+  <ion-list lines="full" class="ion-no-margin ion-no-padding">
+    <ion-item>
+      <ion-label position="stacked">Name</ion-label>
+      <ion-input required type="text" [(ngModel)]="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Price</ion-label>
+      <ion-input required type="number" [(ngModel)]="price"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div class="ion-padding">
+    <ion-button expand="block" class="ion-no-margin" (click)="addExpense()"
+      >Add expense</ion-button
+    >
+  </div>
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab Two
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      Items
+    </ion-list-header>
+
+    <div *ngFor="let item of list">
+      <ion-item>
+        <!-- <ion-avatar slot="start">
+          <img src="./avatar-finn.png">
+        </ion-avatar> -->
+        <ion-label>
+          <h2>{{item.name}}</h2>
+          <small>{{item.date}}</small>
+        </ion-label>
+        <ion-label item-right text-right>{{ item.price }} EUR</ion-label>
+      </ion-item>
+    </div>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addExpenseModal()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
